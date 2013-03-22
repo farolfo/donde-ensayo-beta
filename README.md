@@ -88,7 +88,3 @@ Solo se debe reemplazar la anterior y recompilar con 'mvn clean' y 'mvn package'
 	>'WEB-INF/jsp/head.jsp':  En el scritp de inclusión de la librería de GoogleMaps.
 	>'mulesoft.apps.elManager.domain.service.impl.GooglePlacesAPIService': En la 
 definición del string 'KEY'.
-
-  Para ver la cantidad de request realizados a las APIs se debe visistar la 
-consola de Google (https://code.google.com/apis/console) con el mail 
-'elmanagercomar@gmail.com' y password 'passfour'.
