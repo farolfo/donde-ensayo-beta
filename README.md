@@ -1,57 +1,61 @@
-Reseña del proyecto
+donde ensayo? 
+=============
+--------> http://www.donde-ensayo.com.ar/
+
+Reseï¿½a del proyecto
 -----------------------------------------------------------------------------------
 
-  'donde-ensayo' es una aplicación web que brinda los servicios que toda banda
-"de garage" necesita hoy en dia: buscar salas de ensayo, estudios de grabación,
+  'donde-ensayo' es una aplicaciï¿½n web que brinda los servicios que toda banda
+"de garage" necesita hoy en dia: buscar salas de ensayo, estudios de grabaciï¿½n,
 lugares para tocar, emisoras de radio por la zona y profesores de instrumentos.
-Así, con solo ingresar una ubicación y un radio de cuadras a cubrir, además de
-los datos necesarios para cada tipo de búsqueda, mostrará un resumen de los 
-resultados, con la opción de ver en detalle cada uno y un mapa de donde se 
+Asï¿½, con solo ingresar una ubicaciï¿½n y un radio de cuadras a cubrir, ademï¿½s de
+los datos necesarios para cada tipo de bï¿½squeda, mostrarï¿½ un resumen de los 
+resultados, con la opciï¿½n de ver en detalle cada uno y un mapa de donde se 
 encuentra.
 
   Para obtener los datos necesarios nos valemos de la API de GooglePlaces, la 
 cual requiere datos tales como 'longitud' y 'latitud' para trabajar. Para ello,
-como no es 'user friendly' pedir al usuario sus coordenadas, éstas se obtienen
+como no es 'user friendly' pedir al usuario sus coordenadas, ï¿½stas se obtienen
 por medio de la API de GoogleGeocoding.
-  Además, en el detalle se puede mostrar el website del resultado a mostrar, si
-es que lo tiene. De tratarce este website de una página de Facebook, se implementó
-un pequeño mensaje al costado de dicha web que brinda la cantidad de 'Likes' que
-tiene dicha página, para dar así al usuario una manera de calificar ese resultado,
-valiéndoce de la API de Facebook.
+  Ademï¿½s, en el detalle se puede mostrar el website del resultado a mostrar, si
+es que lo tiene. De tratarce este website de una pï¿½gina de Facebook, se implementï¿½
+un pequeï¿½o mensaje al costado de dicha web que brinda la cantidad de 'Likes' que
+tiene dicha pï¿½gina, para dar asï¿½ al usuario una manera de calificar ese resultado,
+valiï¿½ndoce de la API de Facebook.
 
-  Además, en el caso de no encontrarce un resultado conocido en las búsquedas,
-se implementó la opción de agreagar el contenido faltante a la base de datos
+  Ademï¿½s, en el caso de no encontrarce un resultado conocido en las bï¿½squedas,
+se implementï¿½ la opciï¿½n de agreagar el contenido faltante a la base de datos
 consultada.
 
-  Nota: Con el fin de testear el detalle de los 'Likes' de Facebook, se implementó
-lo siguiente: Si un resultado no contiene un website se le agregará, en el 50% de las
-veces, un link de la página de Facebook de 'MuleSoft'.
+  Nota: Con el fin de testear el detalle de los 'Likes' de Facebook, se implementï¿½
+lo siguiente: Si un resultado no contiene un website se le agregarï¿½, en el 50% de las
+veces, un link de la pï¿½gina de Facebook de 'MuleSoft'.
 
 
 
-Tecnologías utilizadas
+Tecnologï¿½as utilizadas
 -----------------------------------------------------------------------------------
 	
-  Ésta aplicación fue desarrollada con Spring MVC, archivos JSTL y Maven, en Eclipse.
+  ï¿½sta aplicaciï¿½n fue desarrollada con Spring MVC, archivos JSTL y Maven, en Eclipse.
 Las pruebas fueron realizadas en un servidor Jetty y se hizo su correspondiente
-deploy en un servidor Tomcat, el cual está además hosteado en Heroku:
+deploy en un servidor Tomcat, el cual estï¿½ ademï¿½s hosteado en Heroku:
 
-    http://elmanager.herokuapp.com  (ver la 'Nota' I y II en la sección 'Ejecución')
+    http://elmanager.herokuapp.com  (ver la 'Nota' I y II en la secciï¿½n 'Ejecuciï¿½n')
 
-  Para la carga de los 'detalles' y el mapa se utilizó AJAX para no cambiar de
-página.
+  Para la carga de los 'detalles' y el mapa se utilizï¿½ AJAX para no cambiar de
+pï¿½gina.
 
-  También se utilizaron widgets y efectos de jQuery a lo largo del desarrollo,
-por ejemplo, en los campos de los formularios en los que solo son válidos número,
-se utilizó la función .numeric() para restringir el ingreso de otro tipo de 
+  Tambiï¿½n se utilizaron widgets y efectos de jQuery a lo largo del desarrollo,
+por ejemplo, en los campos de los formularios en los que solo son vï¿½lidos nï¿½mero,
+se utilizï¿½ la funciï¿½n .numeric() para restringir el ingreso de otro tipo de 
 caracteres, o en el despliegue de los 'detalles' se utilizaron .fadeIn() y 
 .fadeOut(). 
 
-  En cuanto al estilo del sitio, se utilizó la librería de css de Twitter: Bootstrap.
+  En cuanto al estilo del sitio, se utilizï¿½ la librerï¿½a de css de Twitter: Bootstrap.
 
 
 
-Ejecución
+Ejecuciï¿½n
 -----------------------------------------------------------------------------------
 
   Corra los siguientes comandos desde el directorio raiz, donde se encuentra el 
@@ -63,28 +67,28 @@ archivo pom.xml :
 
   Y visite http://localhost:8080.
 
-  Otra opción análoga es visitar la aplicación hosteada en Heroku:
+  Otra opciï¿½n anï¿½loga es visitar la aplicaciï¿½n hosteada en Heroku:
 
 	http://elmanager.herokuapp.com
 
 
-  Nota I: En el servidor Tomcat las palabras acentuadas no son válidas en los
-formularios, tanto de búsqueda como de agreagado. Si se ingresan, se obviaran
-como caracteres inválidos. Ésto se puede deber a un error en la codificación.
-Así mismo, en los resultados no se muestran caracteres acentuados. En el
+  Nota I: En el servidor Tomcat las palabras acentuadas no son vï¿½lidas en los
+formularios, tanto de bï¿½squeda como de agreagado. Si se ingresan, se obviaran
+como caracteres invï¿½lidos. ï¿½sto se puede deber a un error en la codificaciï¿½n.
+Asï¿½ mismo, en los resultados no se muestran caracteres acentuados. En el
 servidor Jetty ejecutado desde Eclipse este problema no se encuentra.
 
   Nota II: Tanto la GoogleMaps v3. API como la GooglePlaces API requieren de
-una KEY para su uso. Ésta fue pedida y solo permite:
+una KEY para su uso. ï¿½sta fue pedida y solo permite:
    
-	> 1000 accesos/día a la GooglePlacesAPI
-	> 25000 accesos/día a la GoogleMaps v3. API
+	> 1000 accesos/dï¿½a a la GooglePlacesAPI
+	> 25000 accesos/dï¿½a a la GoogleMaps v3. API
 
-  En caso de no funcionar la aplicación debido a que se halla exscedido la cuota
-otorgada, se encuentrá comentado en el código otra KEY obtendia con otro mail.
+  En caso de no funcionar la aplicaciï¿½n debido a que se halla exscedido la cuota
+otorgada, se encuentrï¿½ comentado en el cï¿½digo otra KEY obtendia con otro mail.
 Solo se debe reemplazar la anterior y recompilar con 'mvn clean' y 'mvn package'.
   
   Por si acaso, las claves se deben cambiar en:
-	>'WEB-INF/jsp/head.jsp':  En el scritp de inclusión de la librería de GoogleMaps.
+	>'WEB-INF/jsp/head.jsp':  En el scritp de inclusiï¿½n de la librerï¿½a de GoogleMaps.
 	>'mulesoft.apps.elManager.domain.service.impl.GooglePlacesAPIService': En la 
-definición del string 'KEY'.
+definiciï¿½n del string 'KEY'.
